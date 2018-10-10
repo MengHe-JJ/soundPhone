@@ -25,10 +25,10 @@ iphone手机上会自动全屏播放，加上playsinline属性,webkit-playsinlin
 
 x5-video-orientation 播放器方向，指横屏（landscape ）或者竖屏（portraint）播放；
 
-x5­-video­-player­-fullscreen 全屏设置
+x5-video-player-fullscreen 全屏设置
 
 x5-video-player-type  启用H5播放器（暂时支持安卓不支持IOS）;
 
-x-webkit-airplay 暂时未知（知道的朋友麻烦也给我讲讲）
+x-webkit-airplay 支持音箱等设备的播放（网友这样告诉的，咱们就暂且这样理解吧）
 
 object-fill 指定替换元素的内容应该如何适应到其使用的高度和宽度确定的框；（css属性）防止黑边
