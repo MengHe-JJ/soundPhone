@@ -1,0 +1,125 @@
+<!DOCTYPE html> <!-- 使用 HTML5 doctype，不区分大小写 -->
+<html lang="zh-cmn-Hans"> <!-- 更加标准的 lang 属性写法 http://zhi.hu/XyIa -->
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content=" 不超过150个字符"/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content="name, email@gmail.com"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="标题">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="msapplication-TileColor" content="#000"/>
+    <meta name="msapplication-TileImage" content="icon.png"/>
+    <title>语音播放</title>
+    <link href="css/css.css" rel="stylesheet">
+</head>
+<body>
+    <div class="pagediv">
+        <div class="header">
+            <a href="javascript:void;"><img src="images/logo.png"></a>
+        </div>
+        <div class="page_dub">
+            <div class="goto_nav">
+            <form>
+                <select name="menu1" id="menu1" onchange="location=document.getElementById('menu1').options[document.getElementById('menu1').selectedIndex].value;">
+                    <option value="###">请选择</option>
+                    <option value="sound.html">样音</option>
+                    <option value="index.html">中文</option>
+                    <option value="language.html">语种</option>
+                    <option value="shipin.html">视频作品</option>
+                </select>
+            </form>
+            </div>
+            <div class="main_cut">
+                <ol class="dub_item">
+                    <li>
+                        <a href="javascript:;" class="ttl" onclick="playPause('music1',this)">2015电台代理之餐饮篇</a>
+                        <div class="sound">
+                            <audio width="200px" height="20px" controls="controls" id="music1">
+                                <source src="media/圣诞节音乐-We Wish You A Merry Christmas.mp3" />
+                            </audio>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="###" class="ttl" onclick="playPause('music2',this)">2015电台代理之房产篇</a>
+                        <div class="sound">
+                            <audio width="200px" height="20px" controls="controls" id="music2">
+                                <source src="media/圣诞节音乐-We Wish You A Merry Christmas.mp3" />
+                            </audio>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="###" class="ttl" onclick="playPause('music3',this)">2015电台代理之汽车篇</a>
+                        <div class="sound">
+                            <audio width="200px" height="20px" controls="controls" id="music3">
+                                <source src="media/圣诞节音乐-We Wish You A Merry Christmas.mp3" />
+                            </audio>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="###" class="ttl" onclick="playPause('music4',this)">2015电台代理之商超篇</a>
+                        <div class="sound">
+                            <audio width="200px" height="20px" controls="controls" id="music4">
+                                <source src="media/圣诞节音乐-We Wish You A Merry Christmas.mp3" />
+                            </audio>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="###" class="ttl" onclick="playPause('music5',this)">2015电台代理之通信篇</a>
+                        <div class="sound">
+                            <audio width="200px" height="20px" controls="controls" id="music5">
+                                <source src="media/圣诞节音乐-We Wish You A Merry Christmas.mp3" />
+                            </audio>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="###" class="ttl" onclick="playPause('music6',this)">2015电台代理之娱乐篇</a>
+                        <div class="sound">
+                            <audio width="200px" height="20px" controls="controls" id="music6">
+                                <source src="media/圣诞节音乐-We Wish You A Merry Christmas.mp3" />
+                                <embed src="media/圣诞节音乐-We Wish You A Merry Christmas.mp3" type="audio/mp3" width="200px" height="20px" />
+                            </audio>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="footer_con">
+            <img src="images/copy_right.png">
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+
+var myTtl = document.querySelectorAll('.ttl');
+var audio = document.querySelectorAll('audio');
+    function playPause(id,obj){
+        var oId=document.getElementById(id);
+
+        if(oId.paused){
+            for(var i=0;i<myTtl.length;i++){
+                myTtl[i].className="ttl";
+                audio[i].pause();
+            }
+            oId.play();
+
+        }else if(!oId.paused){
+            oId.pause();
+
+        }
+        obj.className = 'ttl dis';
+    };
+
+</script>
+</html>

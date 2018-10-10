@@ -1,0 +1,155 @@
+<!DOCTYPE html> <!-- 使用 HTML5 doctype，不区分大小写 -->
+<html lang="zh-cmn-Hans"> <!-- 更加标准的 lang 属性写法 http://zhi.hu/XyIa -->
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content=" 不超过150个字符"/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content="name, email@gmail.com"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="标题">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="msapplication-TileColor" content="#000"/>
+    <meta name="msapplication-TileImage" content="icon.png"/>
+    <title>视频作品</title>
+    <link href="css/css.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="pagediv">
+        <div class="header">
+            <a href="javascript:void;"><img src="images/logo.png"></a>
+        </div>
+        <div class="page_dub">
+            <div class="goto_nav">
+            <form>
+                <select name="menu1" id="menu1" onchange="location=document.getElementById('menu1').options[document.getElementById('menu1').selectedIndex].value;">
+                    <option value="sound.html">样音</option>
+                    <option value="index.html">中文</option>
+                    <option value="language.html">语种</option>
+                    <option value="shipin.html" selected="selected">视频作品</option>
+                </select>
+            </form>
+            </div>
+            <div class="main_cut">
+                <div class="item">
+                    <div class="video">
+                        <video id="example_video_1" autoplay loop controls="controls" width="100%" muted="true" webkit-playsinline="true" playsinline="true" poster="images/61478323_23.jpg" preload="none" x5-video-player-type="h5" src="http://video.pearvideo.com/mp4/adshort/20180929/cont-1446339-12974237_adpkg-ad_hd.mp4">
+                            <!-- <source src="http://video.pearvideo.com/mp4/adshort/20180929/cont-1446339-12974237_adpkg-ad_hd.mp4" type="video/mp4" /> -->
+                        </video>
+                    </div>
+                    <p>诗歌：《世界上最远的距离》</p>
+                    <p class="item_span">节选自泰戈尔《飞鸟和鱼的故事》</p>
+                </div>
+                <div class="item">
+                    <div class="video">
+                        <video id="example_video_2" autoplay loop controls="controls" muted="true" preload="none" width="100%" x5-video-player-type="h5" webkit-playsinline="true" playsinline="true" poster="images/4-150126153144.jpg">
+                            <source src="http://video.pearvideo.com/mp4/adshort/20180930/cont-1446353-11909554-112428_adpkg-ad_hd.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <p>诗歌：《世界上最远的距离》</p>
+                    <p class="item_span">节选自泰戈尔《飞鸟和鱼的故事》</p>
+                </div>
+                <div class="item">
+                    <div class="video">
+                        <video id="example_video_3" autoplay loop controls="controls"
+                         muted="true" playsinline="playsinline" webkit-playsinline="webkit-playsinline" width="100%" preload="none" poster="images/20131117083407981.JPG" >
+                            <source src="http://video.pearvideo.com/mp4/third/20180929/cont-1446505-12042658-183610-hd.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <p>散文：《中秋随笔》</p>
+                    <p class="item_span">节选自泰戈尔《飞鸟和鱼的故事》</p>
+                </div>
+                <div class="item">
+                    <div class="video">
+                        <video id="example_video_4" controls="controls" playsinline webkit-playsinline width="100%" preload="none" muted="true" poster="images/4-150126153144.jpg">
+                            <source src="http://video.pearvideo.com/mp4/adshort/20180930/cont-1446353-11909554-112428_adpkg-ad_hd.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <p>散文：《黄昏的倦》</p>
+                    <p class="item_span">节选自泰戈尔《飞鸟和鱼的故事》</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer_con">
+            <img src="images/copy_right.png">
+        </div>
+    </div>
+</body>
+<script src="jquery.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+var vid=document.getElementById('example_video_1');
+    //一般情况下，这样就可以自动播放了，但是一些奇葩iPhone机不可以
+     document.getElementById('example_video_1').play();
+    document.getElementById('example_video_2').play();
+    document.getElementById('example_video_3').play();
+    //必须在微信Weixin JSAPI的WeixinJSBridgeReady才能生效
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        document.getElementById('example_video_1').play();
+        document.getElementById('example_video_3').play();
+        document.getElementById('example_video_2').play();
+        document.getElementById('video').play();
+    }, false);
+
+    //进入全屏
+function FullScreen() {
+    var ele = document.documentElement;
+
+    if (ele .requestFullscreen) {
+        ele .requestFullscreen();
+    } else if (ele .mozRequestFullScreen) {
+        ele .mozRequestFullScreen();
+    } else if (ele .webkitRequestFullScreen) {
+        ele .webkitRequestFullScreen();
+    }
+}
+//退出全屏
+function exitFullscreen() {
+    var de = document;
+    if (de.exitFullscreen) {
+        de.exitFullscreen();
+    } else if (de.mozCancelFullScreen) {
+        de.mozCancelFullScreen();
+    } else if (de.webkitCancelFullScreen) {
+        de.webkitCancelFullScreen();
+    }
+}
+
+$("#example_video_1").click(function(){
+    console.log($(this)[0].muted,111)
+    $(this)[0].muted = false;
+    $(this)[0].playsinline=false;
+    $(this)[0].webkitPlaysinline=false;
+    $(this).attr("x5-video-player-type","h5");
+    $(this).attr("x5-video-player-fullscreen",true);
+    console.log(1)
+    console.log($(this)[0].playsinline,2222)
+})
+$("#example_video_2").click(function(){
+    console.log($(this)[0].muted,111);
+    FullScreen();
+    $(this).attr("x5-video-player-type","h5");
+    $(this).attr("x5-video-player-fullscreen",true)
+    $(this)[0].muted = false;
+    $(this)[0].playsinline=false;
+    console.log(2)
+    console.log($(this)[0].playsinline,2222)
+})
+
+
+    // vid.addEventListener('ended',function(){
+    //     doc.webkitCancelFullScreen(); //播放完毕自动退出全屏
+    // },false);
+</script>
+</html>

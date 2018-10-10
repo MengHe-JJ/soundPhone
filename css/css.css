@@ -1,0 +1,210 @@
+@charset "UTF-8";
+body, div, p, ul,ol, textarea, form, input, h1, h2, h3, h4, h5, dl, dt, dd, img, section, article, aside, header, footer, nav, dialog, figure,span,select,a,li,i,em,b {
+    margin:0;
+    padding:0;
+    list-style:none;
+    border:0;
+}
+body{
+    color: #020202;
+    font-family: "microsoft yahei";
+    background: url(../images/page_bg.jpg) no-repeat 0 0;
+    background-attachment: fixed;
+    background-size: cover;
+    font-size:16px;
+}
+body:before {
+    content: ' ';
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../images/page_bg.jpg) 50% 0 repeat-y;
+    background-size: cover;
+}
+a{
+    color:#020202;
+    text-decoration:none;
+}
+img{border:0;}
+.fl{float:left;}
+.fr{float:right;}
+i{font-style:normal;}
+.clearfix:after{
+    content:'';
+    height:0;
+    font-size:0;
+    visibility:hidden;
+    display:block;
+    clear:both;
+}
+
+.pagediv{
+    padding-bottom:30px;
+}
+.header{
+    padding: 15% 0 10% 0;
+}
+.header a img{
+    display:block;
+    width:100%;
+}
+.goto_nav{
+    width: 100%;
+    height: 55px;
+    background: url(../images/goto_bg.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+.goto_nav form{
+    padding-top:10px;
+}
+.goto_nav select {
+    width: 50%;
+    height: 27px;
+    margin: 0 auto;
+    display: block;
+    background: url(../images/select_bg.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-left:10px;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+.goto_anv select option{
+    font-size:1rem;
+}
+.subnav{
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    background: rgba(209,209,209,0.3);
+    z-index: 500;
+}
+.subnav ul{
+    width:90%;
+    margin:0 auto;
+}
+.subnav ul li{
+    text-align: center;
+    border-bottom: 2px dashed #000;
+}
+.subnav ul li.active a{
+    color: #f1332b;
+}
+.subnav ul li a{
+    font-size: 1rem;
+    padding: 8px 0;
+    display: block;
+    cursor:pointer;
+}
+.main_cut{
+    padding: 20px;
+    background: rgba(209,209,209,0.3);
+    position: relative;
+}
+.main_cut ul.dub_list{
+    overflow:hidden;
+}
+.main_cut ul.dub_list li{
+    padding: 10px 0 13px 0;
+    text-align: center;
+    width: 30%;
+    margin: 0 1.5% 20px 1.5%;
+    float: left;
+    font-size: 1.1rem;
+    background: url(../images/bg01.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+.main_cut ul.dub_list li a{
+    color: #424242;
+}
+.footer_con{
+    padding: 50px 0 30px 0;
+    width: 80%;
+    margin: 0 auto;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+.footer_con img{
+    width:100%;
+}
+/**********详情页面 开始**********/
+.main_cut ol.dub_item li{
+    margin-bottom: 15px;
+}
+.main_cut ol.dub_item li>a.ttl{
+    background: url(../images/icon01.png) no-repeat right center;
+    display: block;
+    font-size: 0.875rem;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+}
+.main_cut ol.dub_item li>a:hover,.main_cut ol.dub_item li>a.dis {
+    color: #c43d3a;
+    background: url(../images/icon01_active.png) no-repeat right center;
+}
+
+.main_cut ol.dub_item li>a.active {
+    color: #c43d3a;
+    background: url(../images/icon01_on.png) no-repeat right center;
+}
+.main_cut ol.dub_item li .sound{
+    padding-bottom: 10px;
+    position: relative;
+    width: 100%;
+    display:none;
+}
+ol.dub_item li .sound audio{
+    display:block;
+    width:100%;
+}
+ol.dub_item li .sound .close{
+    background: url(../images/close.png) no-repeat 0 0;
+    height: 28px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 22px;
+    text-indent: -9999px;
+}
+/**********详情页面 结束**********/
+/**********视频作品 开始**********/
+.item{
+    border: 1px dashed #9e7f8a;
+    background: #fff;
+    padding: 5px 5px 10px 5px;
+}
+.video{
+    margin-bottom:10px;
+    height:232px;
+}
+.video video{
+    background-color: #000;
+    position: relative;
+    padding: 0;
+    font-size: 10px;
+    vertical-align: middle;
+    font-weight: normal;
+    font-style: normal;
+    font-family: Arial,sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #ccc;
+    margin:auto;
+    object-fit:cover;
+}
+.item p{
+    line-height:24px;
+}
+.item p.item_span{
+    color:#008080;
+    font-family:幼圆;
+}
+/**********视频作品 结束**********/

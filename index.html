@@ -1,0 +1,67 @@
+<!DOCTYPE html> <!-- 使用 HTML5 doctype，不区分大小写 -->
+<html lang="zh-cmn-Hans"> <!-- 更加标准的 lang 属性写法 http://zhi.hu/XyIa -->
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content=" 不超过150个字符"/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content="name, email@gmail.com"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="标题">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="msapplication-TileColor" content="#000"/>
+    <meta name="msapplication-TileImage" content="icon.png"/>
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
+
+    <title>首页</title>
+    <link href="css/css.css" rel="stylesheet">
+</head>
+<body>
+    <div class="pagediv">
+        <div class="header">
+            <a href="javascript:void;"><img src="images/logo.png"></a>
+        </div>
+        <div class="page_dub">
+            <div class="goto_nav">
+            <form>
+                <select name="menu1" id="menu1" onchange="location=document.getElementById('menu1').options[document.getElementById('menu1').selectedIndex].value;">
+                    <option value="sound.html">样音</option>
+                    <option value="index.html" selected="selected">中文</option>
+                    <option value="language.html">语种</option>
+                    <option value="shipin.html">视频作品</option>
+                </select>
+            </form>
+            </div>
+            <div class="subnav">
+                <ul>
+                    <li class="active"><a>音配配音</a></li>
+                    <li><a>视频配音</a></li>
+                </ul>
+            </div>
+            <div class="main_cut">
+                <ul class="dub_list">
+                    <li><a href="page.html">广告型</a></li>
+                    <li><a href="page.html">专题型</a></li>
+                    <li><a href="###">动画型</a></li>
+                    <li><a href="###">电影型</a></li>
+                    <li><a href="###">特色型</a></li>
+                    <li><a href="###">其它</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_con">
+            <img src="images/copy_right.png">
+        </div>
+    </div>
+</body>
+
+</html>
