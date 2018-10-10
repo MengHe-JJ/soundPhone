@@ -19,7 +19,7 @@ poster  点击播放前图像的显示；
 
 src 播放的地址；
 
-preload  页面加载加载视频；
+preload  页面加载后加载视频；
 
 iphone手机上会自动全屏播放，加上playsinline属性,webkit-playsinline这个属性就不会全屏了。
 
