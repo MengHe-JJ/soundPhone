@@ -31,4 +31,4 @@ x5-video-player-type  启用H5播放器（暂时支持安卓不支持IOS）;
 
 x-webkit-airplay 暂时未知（知道的朋友麻烦也给我讲讲）
 
-object-fill 指定替换元素的内容应该如何适应到其使用的高度和宽度确定的框；（css属性）
+object-fill 指定替换元素的内容应该如何适应到其使用的高度和宽度确定的框；（css属性）防止黑边
